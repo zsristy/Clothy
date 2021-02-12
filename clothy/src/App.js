@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route,useHistory } from "react-router-dom";
 import Home from "./components/home";
+import SeeProduct from "./components/seeproduct";
 import GoToCart from "./components/cart";
 import Purched from "./components/purched"
 
@@ -12,6 +13,7 @@ function App() {
        <BrowserRouter history={history}>    
         <div>
           <Route path="/" exact component={Home} />
+          <Route path="/seeproduct" exact component={SeeProduct} />
           <Route path="/cart" exact component={GoToCart} />
           <Route path="/purched" exact component={Purched} />
         </div>

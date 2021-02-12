@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import 'semantic-ui-css/semantic.min.css'
 import { Image, Reveal } from 'semantic-ui-react'
 import { Rating , Icon} from 'semantic-ui-react'
+import { Link } from "react-router-dom";
 
 export default function Picturecard(props) {
 
@@ -27,7 +28,7 @@ export default function Picturecard(props) {
   <Rating style={{paddingLeft:"50%"}} maxRating={5} icon='star' onRate={handleRate} />
 
   <i style={{fontSize:20,paddingLeft:"20%"}}>${props.prize}</i>
-  <i style={{paddingLeft:"20%"}}>See product</i>
+  <i style={{paddingLeft:"20%"}}><Link to="/seeproduct" style={{textDecoration:'none',color:"black"}}>See product</Link></i>
   </div>
     </div>
   }
