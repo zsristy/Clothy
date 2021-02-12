@@ -21,12 +21,13 @@ export default function Checkout(props) {
       <Table.Row>
         <Table.Cell>
           <Header>
+            {/* product details need to be shown */}
             <Header.Content>
-              Lena
+              Item 1
             </Header.Content>
           </Header>
         </Table.Cell>
-        <Table.Cell>22</Table.Cell>
+        <Table.Cell>180</Table.Cell>
       </Table.Row>
     </Table.Body>
   </Table>

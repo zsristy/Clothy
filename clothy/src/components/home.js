@@ -2,6 +2,7 @@ import React from "react";
 import MyNavbar from "./mynavbar";
 import Picturecard from "./pictureCard";
 import AddToCart from "./addproduct";
+import Footer from "./footer";
 import backgroundimage1 from "../images/image1.jpg";
 import image5 from "../images/image5.jpg"
 import profile from "../images/profile.jpg"
@@ -71,7 +72,7 @@ export default function Home() {
                             <div className="row" style={{position:"relative", left:10, top:0}}>
                             <img style={{height:300,width:440,position:"relative", left:0, top:0}} src={image5}></img>
                             <img style={{height:300,width:300,position:"absolute", left:300, top:180,borderRadius:"50%"}} src={profile}></img>
-                            {/* here later i will add a profile picture of Sarah */}
+                            {/* here later add a profile picture of Sarah */}
                             </div>
               </div>
               <div className='col s6'
@@ -95,20 +96,27 @@ export default function Home() {
                 
                 <div style={{background:"whitesmoke",
                             marginTop:50}}>
-                          {/* all the selected item will be shown here while selecting */}
+                          {/* all the selected item will be shown here while selecting and this need to be appeared after selecting product */}
                           <AddToCart></AddToCart>  
                 </div>
               </div>                
               <div className='col s9'>
+                <div>
+                  {/* filtering and sorting ber need to be added */}
+                </div>
+                <div>
                 <div className='row' style={{position:"relative", left:0, top:0,marginLeft:60}}>
                             {photoandprize.map((pp)=>{
                             return( 
+                              // picture card of item will be appeared
                             <Picturecard id={pp.id} image={pp.photo} prize={pp.prize}></Picturecard >
                               )
                             })}                           
                 </div>
+                </div>
               </div> 
               </div> 
       </div>
+      <Footer></Footer>
   </div>
 }

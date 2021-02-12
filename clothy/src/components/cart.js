@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import MyNavbar from "./mynavbar";
-import CardList from "./cartlist";
+import CartList from "./cartlist";
 import Checkout from "./cheackout";
 import backgroundimage2 from "../images/image6.jpg";
 import { Button} from 'semantic-ui-react'
@@ -31,9 +31,11 @@ export default function GoToCart() {
             <div className="row" style={{margin:0}}>
                 <div className="col s12">
                     <div className="col s7" style={{display:"flex",justifyContent:"center"}}>
-                    {check!=1 ?<CardList handleSubmit={handleSubmit}></CardList>:""}
+                      {/* value will be passed from home page (addproduct div)*/}
+                    {check!=1 ?<CartList handleSubmit={handleSubmit}></CartList>:""}
                     </div>
                     <div className="col s5" style={{display:"flex",justifyContent:"center"}}>
+                      {/* value will be passed from cartlist div */}
                     {check!=0 ?<Checkout></Checkout>:""}
                     </div>
 
