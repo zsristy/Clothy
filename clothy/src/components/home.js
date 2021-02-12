@@ -1,6 +1,7 @@
 import React from "react";
 import MyNavbar from "./mynavbar";
 import Picturecard from "./pictureCard";
+import AddToCart from "./addproduct";
 import backgroundimage1 from "../images/image1.jpg";
 import image5 from "../images/image5.jpg"
 import profile from "../images/profile.jpg"
@@ -87,12 +88,15 @@ export default function Home() {
       </div>
       <div className='row' style={{marginTop:150, marginBottom:100, width:'100%'}}>
         <div className='col s12'>
-              <div className='col s3' style={{backgroundColor:'goldenrod',height:60,textAlign:'center',padding:12}}>
-                  <div style={{marginBottom:100}}>
+              <div className='col s3'>
+                  <div style={{backgroundColor:'goldenrod', height:50,textAlign:'center',padding:5}}>
                 <h1><i style={{color:"whitesmoke",fontSize:35}}>Clothy's Collection</i></h1>
                 </div>
-                <div>
-
+                
+                <div style={{background:"whitesmoke",
+                            marginTop:50}}>
+                          {/* all the selected item will be shown here while selecting */}
+                          <AddToCart></AddToCart>  
                 </div>
               </div>                
               <div className='col s9'>
